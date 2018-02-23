@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="my-app-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `my-app-element`
+     * This is my first sample element
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class MyAppElement extends Polymer.Element {
+      static get is() { return 'my-app-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'my-app-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MyAppElement.is, MyAppElement);
+  </script>
+</dom-module>
